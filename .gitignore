@@ -1,0 +1,6 @@
+.env
+ercot_zips/
+__pycache__/
+*.pyc
+audits/US-TX-BATC-001/raw_data_gs/
+

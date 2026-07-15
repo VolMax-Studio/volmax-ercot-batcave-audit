@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you cite this audit report or use the replication pipeline, please cite it as follows."
+authors:
+  - family-names: "Nestorov"
+    given-names: "Ivan"
+title: "ERCOT Bat Cave BESS Independent Audit (US-TX-BATC-001)"
+version: 1.0.0
+doi: "10.5281/zenodo.21401796"
+date-released: 2026-07-16
+publisher:
+  name: "VolMax Studio Lab"
+url: "https://volmax-studio.rs"

@@ -1,0 +1,492 @@
+{
+  "protocol": "P10 v1.2",
+  "audit_id": "US-TX-BATC-001",
+  "resource_name": "BATCAVE_ESR1",
+  "window_start": "2026-03-19",
+  "window_end": "2026-05-17",
+  "pulled_at_utc": "2026-07-16T20:44:22.920197+00:00",
+  "reproducibility_class": "Class A (Fully Reproducible)",
+  "files": [
+    {
+      "operating_date": "2026-03-19",
+      "report_date": "2026-05-18",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260518.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-19.csv",
+      "sha256": "901598e2ecdd139bff4206ed1f697cd7ce1d87dc044057655b4a0ff2f85188a2",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-03-20",
+      "report_date": "2026-05-19",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260519.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-20.csv",
+      "sha256": "b420e49589be445bd70e1dc64d3626ef719ba33019a2c42c6e66b8db676409bc",
+      "row_count": 292
+    },
+    {
+      "operating_date": "2026-03-21",
+      "report_date": "2026-05-20",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260520.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-21.csv",
+      "sha256": "454200e2c353c358f153a46d987fbb9091282fb893268f8e6dfc8e0c6a5d3bbf",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-03-22",
+      "report_date": "2026-05-21",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260521.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-22.csv",
+      "sha256": "c13cf23c40cca07bb3f3c2e05d21280285ab707eafd7c1351006ad2e27c47eaf",
+      "row_count": 290
+    },
+    {
+      "operating_date": "2026-03-23",
+      "report_date": "2026-05-22",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260522.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-23.csv",
+      "sha256": "f245bf1298b323c9d295cbb7414a6f20fa8fa8229fcaaa07ab32edda7e69d05b",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-03-24",
+      "report_date": "2026-05-23",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260523.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-24.csv",
+      "sha256": "2fb4c3d47b5fccdd9cb917df5d5086ff08c024476a56d6fe8397723b1320ca79",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-03-25",
+      "report_date": "2026-05-24",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260524.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-25.csv",
+      "sha256": "24459ede97649916032800f5a3b26efcff4425683c93a7bd2a783b81401443be",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-03-26",
+      "report_date": "2026-05-25",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260525.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-26.csv",
+      "sha256": "254f6e902b0f57ec3170d3617b15126d7144e1ebd105ba4d46e5f4eb011924fa",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-03-27",
+      "report_date": "2026-05-26",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260526.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-27.csv",
+      "sha256": "a322559d5f0ee667fe01e93b315a7e67921785cf6e7257ad71b7a28fdf10b982",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-03-28",
+      "report_date": "2026-05-27",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260527.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-28.csv",
+      "sha256": "6fd2bd8e41f60b4a784f7f9ac5e66426e5456b822fc32874bb6a5d4c70dde843",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-03-29",
+      "report_date": "2026-05-28",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260528.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-29.csv",
+      "sha256": "535ba29e907fc1fbe82841bce41d9769cb41043e0a0b482f4aae552ba4366b87",
+      "row_count": 294
+    },
+    {
+      "operating_date": "2026-03-30",
+      "report_date": "2026-05-29",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260529.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-30.csv",
+      "sha256": "96f7bf35e8bda850b660cd00b7f6302ce5171b61c7479602844f1cd05af934aa",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-03-31",
+      "report_date": "2026-05-30",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260530.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-03-31.csv",
+      "sha256": "b91dec1b984b042aa600222007d1be1fa74ad4c2a68ec4e15108735ef96d9837",
+      "row_count": 300
+    },
+    {
+      "operating_date": "2026-04-01",
+      "report_date": "2026-05-31",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260531.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-01.csv",
+      "sha256": "2424b9fe5e3e35371c16054ef94bf791a0aae9d1c86957a3f45bea6f3ee42f9f",
+      "row_count": 296
+    },
+    {
+      "operating_date": "2026-04-02",
+      "report_date": "2026-06-01",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260601.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-02.csv",
+      "sha256": "257b52b57c4242aacb3eb1a44f8ee05ed836b97be621dd5389ff14751a8b0e22",
+      "row_count": 292
+    },
+    {
+      "operating_date": "2026-04-03",
+      "report_date": "2026-06-02",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260602.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-03.csv",
+      "sha256": "bd86b01fb1584900a075d8de6161efaedbc4329be390b75acaeb11781660705c",
+      "row_count": 290
+    },
+    {
+      "operating_date": "2026-04-04",
+      "report_date": "2026-06-03",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260603.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-04.csv",
+      "sha256": "09eae673e27d49f0e1b4510b1d66752039efd67be93b35a623cad01216d0ce5c",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-04-05",
+      "report_date": "2026-06-04",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260604.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-05.csv",
+      "sha256": "261b42e48289ea1ee05502775afcd067297167ed382fc783be61eaddfee5b4e3",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-04-06",
+      "report_date": "2026-06-05",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260605.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-06.csv",
+      "sha256": "2230f52860d35f050e05678d1d973b1fd35f13ec7509ac4d96dc066c2e397203",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-04-07",
+      "report_date": "2026-06-06",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260606.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-07.csv",
+      "sha256": "189fa3f4abe8bf9292d6d91ba0c7009acf602835b88c8155550b36125f98eb6d",
+      "row_count": 310
+    },
+    {
+      "operating_date": "2026-04-08",
+      "report_date": "2026-06-07",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260607.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-08.csv",
+      "sha256": "a9a20af1d5a538fa44ed6fce8954bf6ae2f6e6121760e1607235d6de5f447014",
+      "row_count": 297
+    },
+    {
+      "operating_date": "2026-04-09",
+      "report_date": "2026-06-08",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260608.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-09.csv",
+      "sha256": "46326e1131277afe509c2dac377b48e9176c72df1deca68ffafe3f5dc308dd28",
+      "row_count": 294
+    },
+    {
+      "operating_date": "2026-04-10",
+      "report_date": "2026-06-09",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260609.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-10.csv",
+      "sha256": "513a4beb3cc66673b75b0cb1bdc6645c06eaf1becd1922280b4390710c53a4c0",
+      "row_count": 298
+    },
+    {
+      "operating_date": "2026-04-11",
+      "report_date": "2026-06-10",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260610.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-11.csv",
+      "sha256": "cd3973cb04b4924cd05429be830ea29d4137a36ea5a40628ba40ad6bc27d16be",
+      "row_count": 298
+    },
+    {
+      "operating_date": "2026-04-12",
+      "report_date": "2026-06-11",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260611.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-12.csv",
+      "sha256": "f4d0629b2646d92fcfc181067426e6dde918c312b9814b5a904d4346a9aa08bc",
+      "row_count": 291
+    },
+    {
+      "operating_date": "2026-04-13",
+      "report_date": "2026-06-12",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260612.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-13.csv",
+      "sha256": "6c59ed54d8aac01989345e1654d4dad9e9b7f26a6ea058a94edb704c50a573a0",
+      "row_count": 296
+    },
+    {
+      "operating_date": "2026-04-14",
+      "report_date": "2026-06-13",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260613.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-14.csv",
+      "sha256": "633739863dc8d3084531085daabea61b465777a844ff1f664e16cf7782213955",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-04-15",
+      "report_date": "2026-06-14",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260614.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-15.csv",
+      "sha256": "9495b2263c96e059a3dae3fd551293de33977bb0d7e7d8d374dad73747a94f56",
+      "row_count": 295
+    },
+    {
+      "operating_date": "2026-04-16",
+      "report_date": "2026-06-15",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260615.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-16.csv",
+      "sha256": "0943d60e35c2607b08cf44facc9a2b72c608c2b2b1a0df528d977bd149bfe2d7",
+      "row_count": 292
+    },
+    {
+      "operating_date": "2026-04-17",
+      "report_date": "2026-06-16",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260616.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-17.csv",
+      "sha256": "d303ad50a117da280123ec353175a2f1d13af3ffe316b0113b8b952a42e9712f",
+      "row_count": 294
+    },
+    {
+      "operating_date": "2026-04-18",
+      "report_date": "2026-06-17",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260617.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-18.csv",
+      "sha256": "ea254056ae31d51fa0898ba58efb77f10cf06159ed123d15745bfe16a2a5befc",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-04-19",
+      "report_date": "2026-06-18",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260618.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-19.csv",
+      "sha256": "dd3bdc64589b22d4cbc75ab67c9bbb7d3e9a895febbec9dbd94436d5f6d7d120",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-04-20",
+      "report_date": "2026-06-19",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260619.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-20.csv",
+      "sha256": "3eb88110d7b7e055203e27bbd7370cd48d1642eeca8295fb56de8351dd9abc65",
+      "row_count": 295
+    },
+    {
+      "operating_date": "2026-04-21",
+      "report_date": "2026-06-20",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260620.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-21.csv",
+      "sha256": "6dd87cefa3ed3c7a405ad481d7d4eaeeffa43482997319c978063e086b220c4a",
+      "row_count": 292
+    },
+    {
+      "operating_date": "2026-04-22",
+      "report_date": "2026-06-21",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260621.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-22.csv",
+      "sha256": "0ad15d80bab520fb2243671f932193a1c464ed210be48eba7f2cac5bec11c738",
+      "row_count": 297
+    },
+    {
+      "operating_date": "2026-04-23",
+      "report_date": "2026-06-22",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260622.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-23.csv",
+      "sha256": "72acc6eab412b2cfaa600bed8293d5ef1a1f0bbbdc7bbd2407b3345ac7bfd4c4",
+      "row_count": 296
+    },
+    {
+      "operating_date": "2026-04-24",
+      "report_date": "2026-06-23",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260623.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-24.csv",
+      "sha256": "b1f955aff8ae72b52b73ca20409520698c63d9491d46c57a80d0d30486e2f1da",
+      "row_count": 300
+    },
+    {
+      "operating_date": "2026-04-25",
+      "report_date": "2026-06-24",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260624.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-25.csv",
+      "sha256": "7d33e78df88dd89ac72a8fdc4da38da716a842449883455a89b6fb2c9b1cdbff",
+      "row_count": 302
+    },
+    {
+      "operating_date": "2026-04-26",
+      "report_date": "2026-06-25",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260625.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-26.csv",
+      "sha256": "b61e75ce8733b59d1a4f69293e0549e2da3af75f7652342aac78d156e70993d7",
+      "row_count": 299
+    },
+    {
+      "operating_date": "2026-04-27",
+      "report_date": "2026-06-26",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260626.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-27.csv",
+      "sha256": "9d84a04fce133773ba5198b057cf0bd3887c8a11c50d8e633afa2d7b57a15983",
+      "row_count": 290
+    },
+    {
+      "operating_date": "2026-04-28",
+      "report_date": "2026-06-27",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260627.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-28.csv",
+      "sha256": "1098d19f89a19afdff0c362e8195638b3dd5cc3ff288a61961614df5eaef4cb4",
+      "row_count": 291
+    },
+    {
+      "operating_date": "2026-04-29",
+      "report_date": "2026-06-28",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260628.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-29.csv",
+      "sha256": "cea9d69a39c461afec2c005445152979eb5c611f9aca50bdcb18b5b69b772c46",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-04-30",
+      "report_date": "2026-06-29",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260629.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-04-30.csv",
+      "sha256": "a94ef6e3ed78ae2b09c7f706cdb8b0521f48f6ab539c435fdde77dee1bdea6f0",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-05-01",
+      "report_date": "2026-06-30",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260630.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-01.csv",
+      "sha256": "edaa0bc5f3fac6d6435137f1dd19ca0351297c78cb5b9aa81ccff1059af0818d",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-05-02",
+      "report_date": "2026-07-01",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260701.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-02.csv",
+      "sha256": "ba87149106f16b6e93ad81a84c8c40f3db1968a8eebd6f0a6a1e3b0efcbc3585",
+      "row_count": 291
+    },
+    {
+      "operating_date": "2026-05-03",
+      "report_date": "2026-07-02",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260702.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-03.csv",
+      "sha256": "7a7d61b446aff3a2939da1bd5dfa2ddd32085b81bc7e6fa5b0b0531a2b721d8d",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-05-04",
+      "report_date": "2026-07-03",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260703.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-04.csv",
+      "sha256": "5aa9e0463395e351033bc5c11b424d98e9f0d31693df931b76bed53c37e76b26",
+      "row_count": 291
+    },
+    {
+      "operating_date": "2026-05-05",
+      "report_date": "2026-07-04",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260704.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-05.csv",
+      "sha256": "80053f5aea62d80bfd970a8990f83d648dc14efd2147afabfdf82d1afde184f4",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-05-06",
+      "report_date": "2026-07-05",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260705.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-06.csv",
+      "sha256": "2f137b364e3e1723d3de291d0ffbf29ea22472c91dfd1eed47a43ca11fbcffc9",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-05-07",
+      "report_date": "2026-07-06",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260706.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-07.csv",
+      "sha256": "4562784c3f629f4cba1f789cefb7e0c2a3c5fbb9a6d64a7a0d0cbb6d321ca6d0",
+      "row_count": 291
+    },
+    {
+      "operating_date": "2026-05-08",
+      "report_date": "2026-07-07",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260707.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-08.csv",
+      "sha256": "f819e9b0dd9f7e40a6e02eee9cccad261999c02461ea5e4bb944f79d8fdf12b4",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-05-09",
+      "report_date": "2026-07-08",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260708.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-09.csv",
+      "sha256": "581b01f1dc38ffc1d7ec6f592a651c869238ff143688d060f59c6d72962e0b50",
+      "row_count": 291
+    },
+    {
+      "operating_date": "2026-05-10",
+      "report_date": "2026-07-09",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260709.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-10.csv",
+      "sha256": "c83fa298c627ebf3e2ed85455a81ea2d13d45836c5f774d89f4e311a2f854249",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-05-11",
+      "report_date": "2026-07-10",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260710.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-11.csv",
+      "sha256": "545ddcc0ac92988872d062c8d97a74c1eecea2f8d86a9f0941256551f3892eb8",
+      "row_count": 289
+    },
+    {
+      "operating_date": "2026-05-12",
+      "report_date": "2026-07-11",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260711.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-12.csv",
+      "sha256": "22b75220de69dfe6efe2b5eaf94191bb48a48d66adfedc0e719ba575d68343e2",
+      "row_count": 287
+    },
+    {
+      "operating_date": "2026-05-13",
+      "report_date": "2026-07-12",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260712.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-13.csv",
+      "sha256": "d0afa4e05faf51851f301d5bdd2c86cf9aa26952225902e79764ca7ef0f6542d",
+      "row_count": 290
+    },
+    {
+      "operating_date": "2026-05-14",
+      "report_date": "2026-07-13",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260713.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-14.csv",
+      "sha256": "876838e762b1a072667b39c2d748eb5e7f88e75ba95082585307885fa4e471d4",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-05-15",
+      "report_date": "2026-07-14",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260714.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-15.csv",
+      "sha256": "1c0d02e5c63a73c74d068edff45599fb08bdc9fcb4ebc554c9e51f9edfeb3ab2",
+      "row_count": 290
+    },
+    {
+      "operating_date": "2026-05-16",
+      "report_date": "2026-07-15",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260715.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-16.csv",
+      "sha256": "d893f300b63a4a1ea89b0c477bf2ca03d512d25d1cbda9b931c488f6db2e5e94",
+      "row_count": 288
+    },
+    {
+      "operating_date": "2026-05-17",
+      "report_date": "2026-07-16",
+      "raw_zip_filename": "ext.00013052.0000000000000000.20260716.60_Day_SCED_Disclosure.zip",
+      "filtered_csv_filename": "BATC_ESR1_SCED_2026-05-17.csv",
+      "sha256": "592a2ddf48c3194c1ef0f590ccfdf0f51047e1c3190ff0b8512ee7e56c5c643c",
+      "row_count": 290
+    }
+  ],
+  "total_rows": 17500
+}
