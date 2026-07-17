@@ -488,5 +488,14 @@
       "row_count": 290
     }
   ],
+  "references": [
+    {
+      "filename": "reference/anole_f3_major_events.json",
+      "sha256": "c694e32e12076a2418a56bc669eaaaea146aec58587cef19de2249962eeeb457",
+      "source_audit": "US-TX-ANOL-001",
+      "source_doi": "10.5281/zenodo.21304134",
+      "source_sha256": "e7519306b592fffcdd7d31ae2811fa25f10182cc09bd44ee4d8fab8427aee8c1"
+    }
+  ],
   "total_rows": 17500
 }
