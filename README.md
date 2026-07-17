@@ -37,7 +37,7 @@ Independent verification of the public nameplate claims of the Bat Cave battery 
 
 ## Citation
 
-Nestorov, Ivan (VolMax Studio Lab). *ERCOT Bat Cave BESS Independent Audit (US-TX-BATC-001).* VolMax P10 Verification Protocol v1.2. DOI: [10.5281/zenodo.21401796](https://doi.org/10.5281/zenodo.21401796).
+Nestorov, Ivan (VolMax Studio Lab). *ERCOT Bat Cave BESS Independent Audit (US-TX-BATC-001).* VolMax P10 Verification Protocol v1.2. DOI: [10.5281/zenodo.21401795](https://doi.org/10.5281/zenodo.21401795).
 
 ---
 *VolMax Studio Lab · Independent verification of battery & energy-storage claims · [volmax-studio.rs](https://volmax-studio.rs)*

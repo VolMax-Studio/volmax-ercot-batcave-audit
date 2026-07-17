@@ -87,7 +87,7 @@ The plot below illustrates the peak discharge event, showing the battery drainin
 ![Peak Discharge Event](../../results/panel1_peak_discharge_event.png)
 
 ### Panel 2: SoC Telemetry Consistency Ratio Histogram
-The distribution of the consistency ratio shows a heavy concentration around 0.60–0.70, well below the physical expectation of 0.85+:
+The distribution of the consistency ratio shows a heavy concentration around 0.60–0.70, well below the naive expectation band of 0.85+:
 
 ![SoC Consistency Histogram](../../results/panel2_f3_histogram.png)
 
