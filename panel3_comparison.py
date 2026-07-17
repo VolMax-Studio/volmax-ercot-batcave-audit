@@ -153,7 +153,7 @@ def generate_panel3() -> None:
 
     fig.text(
         0.062, 0.012,
-        "A ratio near 0.94 is consistent with `soc` denominated in delivered energy; near 0.77 with `soc` denominated in total\n"
+        "A ratio near 0.98 is consistent with `soc` denominated in delivered energy; near 0.77 with `soc` denominated in total\n"
         "stored energy (round-trip efficiency plus auxiliary load). We found no published field definition, and with n=2 assets\n"
         f"the public data does not distinguish a reporting convention from a physical one.   Sources: {ANOLE_DOI} · {BATC_DOI}",
         fontsize=7.6, color="#6B7280", ha="left", linespacing=1.6)
