@@ -1,6 +1,6 @@
 {
   "title": "ERCOT Bat Cave BESS Independent Audit (US-TX-BATC-001)",
-  "description": "Independent verification of the public nameplate claims of the Bat Cave battery energy storage system (BATCAVE_ESR1, Mason County, TX) — 100 MW / 100 MWh — from ERCOT SCED 60-day telemetry, under the VolMax P10 Verification Protocol. Power capacity (F1): Not Demonstrated (peak output: 72.61 MW). Energy capacity (F2): Not Demonstrated (largest continuous discharge: 58.0 MWh). SoC telemetry consistency (F3): Inconsistent (1.22% pass rate; mean consistency ratio: 0.6339). SoC field interpretation (F4): Deferred.",
+  "description": "Independent verification of the public nameplate claims of the Bat Cave battery energy storage system (BATCAVE_ESR1, Mason County, TX) — 100 MW / 100 MWh — from ERCOT SCED 60-day telemetry, under the VolMax P10 Verification Protocol. Power capacity (F1): Not Demonstrated (peak output: 72.61 MW). Energy capacity (F2): Not Demonstrated (largest continuous discharge: 58.0 MWh). SoC telemetry consistency (F3): Inconsistent per frozen rule (1.22% pass overall, mean ratio 0.6339; exploratory major-event stratification: 1.71% pass, mean ratio 0.7703). The deviation is consistent with round-trip efficiency and auxiliary load under an undocumented soc field definition; physical cause undetermined. SoC field interpretation (F4): Deferred.",
   "creators": [
     {
       "name": "Nestorov, Ivan",
