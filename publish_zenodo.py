@@ -42,8 +42,11 @@ CORE_FILES = [
     "audits/US-TX-BATC-001/failures.md",
     "audits/US-TX-BATC-001/metrics.json",
     "audits/US-TX-BATC-001/data_manifest.json",
+    "audits/US-TX-BATC-001/reference/anole_f3_major_events.json",
     "results/panel1_peak_discharge_event.png",
     "results/panel2_f3_histogram.png",
+    "results/panel3_f3_comparison.png",
+    "panel3_comparison.py",
 ]
 
 # Raw telemetry. The manifest hashes are worthless if the files they describe

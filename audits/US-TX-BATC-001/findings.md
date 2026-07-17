@@ -1,6 +1,6 @@
 # US-TX-BATC-001 — Findings
 
-**Generated:** 2026-07-17T15:35:22.674363+00:00  
+**Generated:** 2026-07-17T15:42:32.531069+00:00  
 **Protocol:** P10 v1.2  
 **Anchor class:** A (Primary source ERCOT MIS data; fully reproducible)  
 **Rows analysed (post-dedup, ON only):** 16,925  
