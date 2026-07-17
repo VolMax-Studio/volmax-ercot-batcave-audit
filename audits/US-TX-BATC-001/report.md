@@ -97,8 +97,8 @@ The distribution of the consistency ratio shows a heavy concentration around 0.6
 
 *This section presents findings that were not pre-registered and do not affect the primary audit verdicts.*
 
-### Telemetry Ratio Mismatch (Event-Size Stratification)
-The overall average consistency ratio of metered discharge to telemetered SoC drop is 0.6339 across the entire 60-day window. This overall average is not uniform, but exhibits a strong dependency on event sizes, as demonstrated when the 245 evaluable discharge events are stratified by integrated discharge size:
+### Telemetry Ratio Behavior (Event-Size Stratification)
+The overall average consistency ratio of metered discharge to telemetered SoC drop is 0.6339 across the entire 60-day window. This overall average is not uniform, but exhibits a dependency on event sizes, as demonstrated when the 245 evaluable discharge events are stratified by integrated discharge size:
 
 | Event Size Bin | Event Count | Mean Consistency Ratio | Ratio Range |
 | :--- | :---: | :---: | :---: |
@@ -116,6 +116,6 @@ To establish an equivalent comparison with the esVolta Anole BESS audit, we eval
 - **Bat Cave Equivalent Analysis:** Re-filtering Bat Cave's discharge events to major cycles ($\ge$ 10 MWh) yields **117 events**. Under this threshold:
   - **Pass Rate (ratio $\in$ [0.85, 1.0]):** Only **1.71%** (2 out of 117 events).
   - **Mean Consistency Ratio:** **0.7703** (with a maximum observed ratio of **0.9055**).
-- **Summary:** While both audits show that smaller micro-events degrade the telemetry ratio further (micro-events $<$ 5 MWh have a mean ratio of **0.4178** in Bat Cave), the behavior on major events is starkly different: Anole's telemetry aligned with physical thermodynamic expectations under major cycles (81.8% pass rate, 0.94 mean ratio), whereas Bat Cave's telemetry fails to align even under major cycles (1.71% pass rate, 0.7703 mean ratio), exhibiting a systematic ~23% energy deficit under these dispatches.
+- **Summary:** While both audits show that smaller micro-events reduce the telemetry ratio further (micro-events $<$ 5 MWh have a mean ratio of **0.4178** in Bat Cave), the behavior on major events exhibits a distinct baseline shift. Under this threshold, our reconstruction method closes the energy balance for Anole but not for Bat Cave (mean ratio 0.94 vs 0.7703). We do not interpret this as a property of either physical asset. A ratio near 0.77 is what round-trip efficiency and auxiliary load would produce if `soc` is denominated in total/internal rather than delivered energy; a ratio near 0.94 is what a delivered-energy denomination would produce. With n=2 and no published field semantics, we cannot distinguish a fleet-level convention difference from a physical one—which is itself the finding.
 
-A definitive resolution of this systematic ratio mismatch requires official ERCOT MIS column documentation.
+A definitive resolution of these differences requires official ERCOT MIS column documentation.

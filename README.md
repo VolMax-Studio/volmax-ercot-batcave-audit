@@ -17,7 +17,7 @@ Independent verification of the public nameplate claims of the Bat Cave battery 
 |---|---|---|---|
 | F1 | 100 MW power capacity | **Not Demonstrated** (Bounded) | Max physical output peaked at 72.61 MW under SCED limits. High Sustainable Limit (HSL) telemetry confirms model capacity at 100.0 MW, but the asset was never dispatched to nameplate capacity. |
 | F2 | 100 MWh energy capacity | **Not Demonstrated** (Not Verified) | Largest continuous net discharge block was 58.0 MWh. When instructed to fully charge (Base Point <= LSL < 0), the starting SoC of the subsequent discharge blocks never exceeded 75.54 MWh. |
-| F3 | SoC telemetry internal consistency | **Inconsistent** | Only 3 out of 245 evaluable discharge events (1.22%) met physical consistency range [0.85, 1.0]. Mean consistency ratio: 0.6339. |
+| F3 | SoC telemetry internal consistency | **Inconsistent** | Only 1.22% of events meet naive thermodynamic range [0.85, 1.0] (mean: 0.6339). Deviation likely reflects physical losses/auxiliary loads or column semantics. |
 | F4 | SoC field interpretation | **Deferred** | Max observed `max_soc` peaked at 102.95 MWh. Verdict is deferred pending official ERCOT column schemas. |
 
 ### Visualized Findings
