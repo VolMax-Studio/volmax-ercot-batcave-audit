@@ -108,21 +108,14 @@ The overall average consistency ratio of metered discharge to telemetered SoC dr
 | **30 - 50 MWh** | 37 | **0.7838** | [0.7289, 0.8424] |
 | **>= 50 MWh** | 8 | **0.7965** | [0.7683, 0.8221] |
 
-#### Contrast with Anole and AEMO Dispatch Telemetry
-To put these findings in context, we contrast Bat Cave's telemetry behavior with both the ERCOT Anole BESS audit (US-TX-ANOL-001) and the AEMO NEM fleet telemetry (AU).
+#### Contrast with Anole Audit Findings
+To establish an equivalent comparison with the esVolta Anole BESS audit, we evaluate the telemetry behavior on major discharge events using the identical threshold of **$\ge$ 10 MWh**:
 
-##### Comparison with Anole Audit
-For major discharge events ($\ge$ 10 MWh), the consistency ratios show a distinct baseline shift between the two ERCOT assets:
-- **Anole BESS:** Reaches a mean consistency ratio of **0.9809** (Version 1.0.1, DOI: 10.5281/zenodo.21304135). Due to variance around this high center, 17.3% of its major events exceed 1.0.
-- **Bat Cave BESS:** Reaches a mean consistency ratio of **0.7703** (117 major events), with 0% of events exceeding 1.0 (maximum ratio 0.9055).
-
-However, the fact that Bat Cave has 0% of events exceeding 1.0 is a consequence of statistical distribution rather than a proof of physical compliance. Since the Bat Cave distribution is centered at 0.77 with a standard deviation of 0.043, a ratio of 1.0 lies more than $+5.30\sigma$ above the mean. Thus, it is mathematically expected that no observed events exceed 1.0, regardless of telemetry quality. Similarly, the higher pass rate of Anole is primarily a function of its distribution centering rather than superior telemetry quality.
-
-Without official ERCOT documentation of the telemetry fields, it remains unresolved whether the difference between Anole's $\sim$0.98 mean and Bat Cave's $\sim$0.77 mean represents a difference in physical performance (e.g., round-trip efficiency and auxiliary loads) or merely a difference in reporting convention (e.g., total internal energy capacity vs. usable delivered energy capacity). With $n = 2$ assets, we cannot distinguish reporting conventions from physical performance.
-
-##### Comparison with AEMO NEM Telemetry
-This ambiguity in ERCOT contrasts. In AEMO's NEM dispatch telemetry (spanning 53 units over 12 months), the telemetry fields exhibit a precise mathematical identity. Under zero regulation services ($\text{LOWERREG} = 0$), the Victoria Big Battery (VBB1) telemetry satisfies the closed-form equation:
-$$\text{ENERGY\_STORAGE}(t) - \text{INITIAL\_ENERGY\_STORAGE}(t) = - \text{trapez}(\text{INITIALMW} \to \text{TOTALCLEARED})$$
-(where the negative sign arises because AEMO represents charging as negative MW power). This demonstrates that AEMO's telemetry is directly calculated via closed-form integration of dispatch instructions rather than being an independent physical measurement. In contrast, ERCOT's lack of documented semantics makes it impossible to verify if its fields represent raw physical sensor readings or integrated dispatch values.
+- **Anole Verbatim Reference:** The Anole report (`US-TX-ANOL-001/report.md`, lines 84–88) states:
+  > *"As a post-hoc analysis (not pre-registered), filtering the events to major discharge cycles (energy ≥ 10 MWh) increases the consistency rate to 81.8% (180 out of 220 events), clustering in the expected [0.85, 1.0] physical band with a mean ratio of 0.98."*
+- **Bat Cave Equivalent Analysis:** Re-filtering Bat Cave's discharge events to major cycles ($\ge$ 10 MWh) yields **117 events**. Under this threshold:
+  - **Pass Rate (ratio $\in$ [0.85, 1.0]):** Only **1.71%** (2 out of 117 events).
+  - **Mean Consistency Ratio:** **0.7703** (with a maximum observed ratio of **0.9055**).
+- **Summary:** While both audits show that smaller micro-events reduce the telemetry ratio further (micro-events $<$ 5 MWh have a mean ratio of **0.4178** in Bat Cave), the behavior on major events exhibits a distinct baseline shift. Under this threshold, the mean ratio is **0.9809** for Anole and **0.7703** for Bat Cave. However, this does not indicate superior data quality for Anole: because Anole's distribution is centered at 0.98, its variance causes 38 events (17.3%) to exceed 1.0 (up to 1.25), which is thermodynamically impossible (delivered energy cannot exceed reported SoC drawdown). Bat Cave, centered at 0.77, has exactly 0% of events exceeding 1.0 (maximum ratio 0.9055), meaning every single event is physically possible. We do not interpret this as a property of either physical asset. A ratio near 0.77 is consistent with `soc` denominated in total/internal energy (reflecting round-trip efficiency and auxiliary load); a ratio near 0.98 is consistent with a delivered-energy denomination. With n=2 and no published field semantics, the public telemetry is insufficient to distinguish a fleet-level convention difference from a physical performance difference—which is itself the finding.
 
 A definitive resolution of these differences requires official ERCOT MIS column documentation.
