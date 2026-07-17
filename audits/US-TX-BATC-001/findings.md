@@ -1,6 +1,6 @@
 # US-TX-BATC-001 — Findings
 
-**Generated:** 2026-07-16T21:00:24.309133+00:00  
+**Generated:** 2026-07-17T03:46:23.557841+00:00  
 **Protocol:** P10 v1.2  
 **Anchor class:** A (Primary source ERCOT MIS data; fully reproducible)  
 **Rows analysed (post-dedup, ON only):** 16,925  
@@ -29,7 +29,7 @@
 - L2 Anomaly intervals (TNO > 100 MW): **0**
 
 **Verdict:** **Bounded**
-> **Note:** The maximum observed output is exactly equal to the High Sustainable Limit (HSL) of 100.0 MW. This indicates the capacity is demonstrated at the SCED model ceiling, meaning the physical asset output is likely model-saturated at this value.
+> **Note:** The maximum observed output peaked at 72.61 MW under SCED limits. High Sustainable Limit (HSL) telemetry confirms model capacity at 100.0 MW, but the asset was never dispatched to nameplate capacity.
 
 ---
 
@@ -54,7 +54,8 @@
 - Required: ≥ 80%
 - Ratio range: [0.0375, 1.4112], mean=0.6339
 
-**Verdict:** **Inconsistent** *(F3 is a standalone finding — does not modify F1/F2)*
+**Verdict:** **Inconsistent** *(defined strictly under the naive thermodynamic expectation rule)*
+> **Note:** This deviation does not imply telemetry error or underperformance. Because the exact definition of the reported `soc` field (including usable capacity boundaries, round-trip efficiency losses, or auxiliary/parasitic consumption) is undocumented, the physical cause remains undetermined without official ERCOT column schemas. A consistency ratio of 0.63–0.77 is aligned with physical losses and parasitic auxiliary loads.
 
 ---
 
@@ -74,10 +75,10 @@
 
 - All verdicts rendered from frozen F1–F4 grammar replicated from Anole audit.
 - Anchor class A (Primary source ERCOT MIS data; fully reproducible).
-- Access to the ERCOT MIS portal was geographically restricted during automated collection.
+- Access to the ERCOT MIS portal required US network egress during automated collection.
   To maintain reproducibility, raw filtered CSV files are committed directly to this repository,
   with a direct ZIP cross-check performed on a sample day to ensure ingestion parity.
-  Due to Grid Status API Terms of Use, this repository must remain private until licensing clearance is completed.
+  Grid Status data was used solely for cell-by-cell cross-validation and is not distributed in this repository.
 - F3 is a standalone telemetry consistency evaluation and does not affect the primary verdicts.
 - **Protocol Schema:** All verdicts are reported using the original Anole string categories to ensure direct comparability. No mapping to v1.1.1 ledger strings is performed to avoid misleading classifications (such as forcing a Bounded claim with 72.61% peak output into a 'Verified with Limitations' status, or a Not Verified claim into 'Hypothesis Rejected').
 

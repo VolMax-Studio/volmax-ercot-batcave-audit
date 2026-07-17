@@ -13,7 +13,7 @@
 
 ## 1. Executive Summary & Verdicts
 
-This audit evaluates the physical capacity claims of the **Bat Cave BESS** in the ERCOT market using primary telemetered disclosure data. The dataset was obtained directly from the ERCOT MIS portal via a geographical VPN connection to ensure Class A admissibility, and cross-validated cell-by-cell against the Grid Status API rendering. The audit is classified as **Anchor Class A**.
+This audit evaluates the physical capacity claims of the **Bat Cave BESS** in the ERCOT market using primary telemetered disclosure data. The dataset was obtained directly from the ERCOT MIS portal under US network egress, and cross-validated cell-by-cell against the Grid Status API rendering. The audit is classified as **Anchor Class A**.
 
 ### Verdict Vocabulary (Version 1.2)
 To ensure conceptual correctness and avoid misclassifications, this audit adopts the **P10 v1.2** controlled vocabulary standard, introducing the **`Not Demonstrated`** category. This designates claims that were not physically achieved during the operating window, but were also not disproven or rejected (e.g., because dispatch limits prevented a nameplate test in F1, or the asset's normal SoC telemetry reached 99.18 MWh while full-charge dispatches were followed by discharge blocks capped at 75.54 MWh in F2). This replaces misleading classifications (such as forcing F1 into 'Verified with Limitations' or F2 into 'Hypothesis Rejected').
@@ -22,14 +22,14 @@ To ensure conceptual correctness and avoid misclassifications, this audit adopts
 | :--- | :--- | :--- | :--- | :--- |
 | **F1** | 100.0 MW Power Capacity | Bounded | Not Demonstrated | HSL telemetry confirms model capacity at 100.0 MW. Actual physical net output peak reached 72.61 MW, and Base Points reached 84.5 MW. The asset was never dispatched to nameplate capacity. |
 | **F2** | 100.0 MWh Energy Capacity | Not Verified | Not Demonstrated | The largest continuous net discharge block was 58.0 MWh. When instructed to fully charge (Base Point <= LSL < 0), the starting SoC of the subsequent discharge blocks never exceeded 75.54 MWh. |
-| **F3** | SoC Telemetry Consistency | Inconsistent | Inconsistent | BMS SoC estimates compared against integrated net output show only 1.22% of discharge events fall within the [0.85, 1.0] physical consistency range (mean: 0.6339). |
+| **F3** | SoC Telemetry Consistency | Inconsistent | Inconsistent | Consistency ratio deviates from naive thermodynamic expectations (mean: 0.6339); physical cause (RTE, parasitic loads) or column schema is undetermined. |
 | **F4** | SoC Field Interpretation | Deferred | Deferred | Observed `max_soc` peaked at 102.95 MWh, which is consistent with an MWh scale. The pre-registered hypothesis framing is void due to a scoping error; the verdict is deferred pending official ERCOT column schemas. |
 
 ---
 
 ## 2. Ingestion, Reproducibility & L1 Integrity
 
-The telemetry data for this audit was acquired directly from the **ERCOT MIS** portal (`pull_batcave.py`) under a geographical US VPN connection. ERCOT MIS portal access is geo-restricted to US IP ranges; raw filtered data is archived in this repository, so verification of this audit does not depend on geographic access.
+The telemetry data for this audit was acquired directly from the **ERCOT MIS** portal (`pull_batcave.py`) utilizing US network egress. ERCOT MIS portal access requires US IP egress; raw filtered data is archived in this repository, so verification of this audit does not depend on geographic access.
 - **Cross-Check Path:** A cell-by-cell cross-validation between the ERCOT direct dataset and the Grid Status API rendering was performed for all 59 overlapping days (2026-03-19 to 2026-05-16). Out of 17,210 compared rows, 0 cell mismatches were found, demonstrating 100% parity across all telemetered output, dispatch, limit, and SoC values.
 - **Reproducibility:** Classified as **Class A**. To ensure reproducibility, raw filtered CSV files containing only the target resource telemetry are committed to this repository under `audits/US-TX-BATC-001/raw_data/` along with `data_manifest.json` containing SHA-256 hashes.
 - **Terms of Use Constraint:** Because the primary data is obtained directly from ERCOT public disclosures and is fully reproducible, this repository serves as a Class A audit. Grid Status API was used solely for cross-validation.
@@ -67,8 +67,10 @@ Energy capacity requires a continuous discharge block of ≥ 30 minutes to verif
 Evaluates the mathematical consistency between operator-reported BMS State of Charge (SoC) and actual physical net output (TNO).
 - **Formula:** $\Delta \text{SoC} = \text{SoC}_{\text{start}} - \text{SoC}_{\text{end}}$ vs $\text{Discharge MWh} = \int \text{TNO} \, dt$
 - **Expected Ratio:** $\frac{\text{Discharge MWh}}{\Delta \text{SoC}} \in [0.85, 1.0]$ 
-- **Results:** Only **3 out of 245** evaluable events (1.22%) met this criterion. The mean consistency ratio is **0.6339**, indicating a systematic mismatch where the reported SoC drops significantly faster than integrated energy output.
-- **Verdict:** **Inconsistent**. Standalone finding (does not affect F1/F2).
+- **Results:** Only **3 out of 245** evaluable events (1.22%) met this criterion. The mean consistency ratio is **0.6339**, indicating a systematic deviation where the reported SoC drops significantly faster than integrated energy output.
+- **Verdict:** **Inconsistent** (defined strictly under the naive thermodynamic expectation rule).
+  - *Context:* This deviation does not imply telemetry error or underperformance. Because the exact physical definition of the reported `soc` field (e.g., usable energy, round-trip efficiency losses, or auxiliary/parasitic consumption) is undocumented, the physical cause remains undetermined. Under standard battery characteristics, a ratio of 0.63–0.77 is consistent with physical losses and parasitic auxiliary loads, but cannot be verified without official ERCOT column schemas.
+
 
 ### F4 — SoC Field Interpretation & Pre-Registration Compromise
 - **Pre-Registration Failure:** The pre-registered F4 hypothesis framing was based on an L0 scoping error asserting that the maximum telemetered SoC on April 1, 2026, was 76.8 MWh. Actual telemetry shows `max_soc` reached 102.57 MWh and `soc` reached 73.77 MWh on that day. The scoping error has been documented in `failures.md`.
@@ -82,12 +84,12 @@ Evaluates the mathematical consistency between operator-reported BMS State of Ch
 ### Panel 1: Peak Continuous Discharge Event (2026-05-12)
 The plot below illustrates the peak discharge event, showing the battery draining from 75.81 MWh to 3.65 MWh, delivering a total of 58.0 MWh:
 
-![Peak Discharge Event](../../../results/panel1_peak_discharge_event.png)
+![Peak Discharge Event](../../results/panel1_peak_discharge_event.png)
 
 ### Panel 2: SoC Telemetry Consistency Ratio Histogram
 The distribution of the consistency ratio shows a heavy concentration around 0.60–0.70, well below the physical expectation of 0.85+:
 
-![SoC Consistency Histogram](../../../results/panel2_f3_histogram.png)
+![SoC Consistency Histogram](../../results/panel2_f3_histogram.png)
 
 ---
 

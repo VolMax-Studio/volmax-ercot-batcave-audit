@@ -3,10 +3,12 @@ message: "If you cite this audit report or use the replication pipeline, please 
 authors:
   - family-names: "Nestorov"
     given-names: "Ivan"
+    orcid: "https://orcid.org/0009-0006-7940-9539"
 title: "ERCOT Bat Cave BESS Independent Audit (US-TX-BATC-001)"
 version: 1.0.0
 doi: "10.5281/zenodo.21401796"
 date-released: 2026-07-16
+license: "CC-BY-4.0"
 publisher:
   name: "VolMax Studio Lab"
 url: "https://volmax-studio.rs"

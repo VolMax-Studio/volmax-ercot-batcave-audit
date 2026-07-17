@@ -499,7 +499,7 @@ def write_findings(m: dict, path: Path):
     lines += [
         "",
         f"**Verdict:** {vi(f1['verdict'])}",
-        f"> **Note:** The maximum observed output is exactly equal to the High Sustainable Limit (HSL) of {f1['max_hsl_mw']} MW. This indicates the capacity is demonstrated at the SCED model ceiling, meaning the physical asset output is likely model-saturated at this value.",
+        f"> **Note:** The maximum observed output peaked at {f1['max_tno_mw']} MW under SCED limits. High Sustainable Limit (HSL) telemetry confirms model capacity at {f1['max_hsl_mw']} MW, but the asset was never dispatched to nameplate capacity.",
         "",
         "---",
         "",
@@ -534,7 +534,8 @@ def write_findings(m: dict, path: Path):
         ]
     lines += [
         "",
-        f"**Verdict:** {vi(f3['verdict'])} *(F3 is a standalone finding — does not modify F1/F2)*",
+        f"**Verdict:** {vi(f3['verdict'])} *(defined strictly under the naive thermodynamic expectation rule)*",
+        "> **Note:** This deviation does not imply telemetry error or underperformance. Because the exact definition of the reported `soc` field (including usable capacity boundaries, round-trip efficiency losses, or auxiliary/parasitic consumption) is undocumented, the physical cause remains undetermined without official ERCOT column schemas. A consistency ratio of 0.63–0.77 is aligned with physical losses and parasitic auxiliary loads.",
         "",
         "---",
         "",
@@ -554,10 +555,10 @@ def write_findings(m: dict, path: Path):
         "",
         "- All verdicts rendered from frozen F1–F4 grammar replicated from Anole audit.",
         f"- Anchor class {anchor_desc}.",
-        "- Access to the ERCOT MIS portal was geographically restricted during automated collection.",
+        "- Access to the ERCOT MIS portal required US network egress during automated collection.",
         "  To maintain reproducibility, raw filtered CSV files are committed directly to this repository,",
         "  with a direct ZIP cross-check performed on a sample day to ensure ingestion parity.",
-        "  Due to Grid Status API Terms of Use, this repository must remain private until licensing clearance is completed.",
+        "  Grid Status data was used solely for cell-by-cell cross-validation and is not distributed in this repository.",
         "- F3 is a standalone telemetry consistency evaluation and does not affect the primary verdicts.",
         "- **Protocol Schema:** All verdicts are reported using the original Anole string categories to ensure direct comparability. No mapping to v1.1.1 ledger strings is performed to avoid misleading classifications (such as forcing a Bounded claim with 72.61% peak output into a 'Verified with Limitations' status, or a Not Verified claim into 'Hypothesis Rejected').",
         "",
