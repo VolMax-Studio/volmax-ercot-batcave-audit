@@ -663,6 +663,59 @@ def generate_plots(rows: list[dict], blocks: list[dict], output_dir: Path):
         plt.close()
         print(f"Saved Panel 2 plot to {output_dir / 'panel2_f3_histogram.png'}")
 
+    # ── Panel 3: F3 Comparison (Anole vs Bat Cave) ───────────────────────────
+    anole_path = output_dir.parent.parent / "volmax-ercot-anole-audit" / "audits" / "US-TX-ANOL-001" / "metrics.json"
+    if anole_path.exists():
+        try:
+            with open(anole_path, encoding="utf-8") as f:
+                anole = json.load(f)
+            anole_ratios = [e['consistency_ratio'] for e in anole['F3']['events'] if e['mwh'] >= 10.0]
+            
+            # Calculate actual ratio for batcave
+            batcave_ratios = []
+            for b in blocks:
+                soc_s = b.get("soc_start")
+                soc_e = b.get("soc_end")
+                mwh   = b.get("mwh")
+                if soc_s is None or soc_e is None or mwh is None:
+                    continue
+                if math.isnan(soc_s) or math.isnan(soc_e):
+                    continue
+                delta_soc = soc_s - soc_e
+                if delta_soc <= 0 or mwh < 10.0:
+                    continue
+                batcave_ratios.append(mwh / delta_soc)
+
+            if anole_ratios and batcave_ratios:
+                fig, ax = plt.subplots(figsize=(16, 9), dpi=100)
+                anole_color = '#2ca02c' # Green
+                batcave_color = '#1f77b4' # Blue
+
+                ax.hist(anole_ratios, bins=30, range=(0.4, 1.4), alpha=0.6, color=anole_color, edgecolor='darkgreen', 
+                        label=f'esVolta Anole BESS (n={len(anole_ratios)} major events, mean={sum(anole_ratios)/len(anole_ratios):.2f})')
+                ax.hist(batcave_ratios, bins=30, range=(0.4, 1.4), alpha=0.6, color=batcave_color, edgecolor='darkblue', 
+                        label=f'Bat Cave BESS (n={len(batcave_ratios)} major events, mean={sum(batcave_ratios)/len(batcave_ratios):.2f})')
+
+                # Draw denomination bands
+                ax.axvspan(0.72, 0.82, color='#ff7f0e', alpha=0.15, label='~0.77: Total/Internal Denomination Band (incl. losses)')
+                ax.axvspan(0.89, 0.99, color='#9467bd', alpha=0.15, label='~0.94: Delivered Denomination Band')
+
+                ax.set_xlabel('Consistency Ratio (Metered Discharge MWh / Telemetered SoC Delta)', fontsize=16, labelpad=15)
+                ax.set_ylabel('Number of Discharge Events (Major Cycles $\\geq$ 10 MWh)', fontsize=16)
+                ax.tick_params(labelsize=14)
+                ax.set_xlim(0.4, 1.3)
+                ax.grid(True, linestyle=':', alpha=0.6)
+
+                plt.title('ERCOT BESS Telemetry Comparison: Two Distinct Scaling Conventions', fontsize=18, fontweight='bold', pad=20)
+                ax.legend(loc='upper right', fontsize=14)
+
+                fig.tight_layout()
+                plt.savefig(output_dir / 'panel3_f3_comparison.png', dpi=100)
+                plt.close()
+                print(f"Saved Panel 3 plot to {output_dir / 'panel3_f3_comparison.png'}")
+        except Exception as ex:
+            print(f"Warning: Failed to generate Panel 3 plot: {ex}")
+
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
