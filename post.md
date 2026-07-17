@@ -1,39 +1,32 @@
-We ran our ERCOT battery audit a second time — same frozen rules, different asset, different operator. The replication neither confirmed nor contradicted the first result. It found the edge of what public telemetry can tell you.
+We audited a second ERCOT battery under the same frozen rules. The replication didn't confirm or contradict our first audit — it exposed the limits of public telemetry.
 
-Bat Cave BESS (100 MW / 100 MWh, Mason County, TX): 60 days of primary ERCOT SCED disclosure telemetry, 17,500 records.
+Bat Cave BESS (100 MW/100 MWh, TX): 60 days of primary ERCOT SCED telemetry, 17,500 rows.
 
-**First, our own error.** Our pre-registration cited a number that does not exist in the data. The hypothesis framing built on it was voided, and the error is documented in our public failure registry. The rules stayed frozen. The mistake stays visible.
+**First, our error.** Our pre-registration cited a non-existent number. The hypothesis built on it was voided, and the error is in our public failure registry. The rules stayed frozen; the mistake stays visible.
 
-**What we found.**
+**Findings.** The 100 MW claim was never tested: peak dispatch was 72.6 MW, and ERCOT never called for >84.5 MW. Under our protocol, this is "Not Demonstrated" — a statement about dispatch, not physical limits. Max discharge: 58.0 MWh.
 
-The 100 MW claim was never tested. ERCOT never dispatched the asset above 84.5 MW, and peak output was 72.6 MW. Under our protocol that is "Not Demonstrated" — a statement about dispatch, not about the battery. Largest continuous discharge: 58.0 MWh.
+**The unresolved telemetry.** We compare reconstructed delivered energy against reported state-of-charge (SoC) drop.
 
-**Then the part we cannot resolve.**
+On Anole (240 MW/480 MWh), reconciliation closed on 81.8% of major events (mean ratio 0.98).
+On Bat Cave, it closed on only 1.71% of major events (mean ratio 0.77).
 
-Our method reconstructs delivered energy from metered output and compares it against the reported state-of-charge drop.
+Same market, same data product, two different regimes. Yet their standard deviations are nearly identical (0.038 vs 0.043). The difference is a pure location shift of 0.21.
 
-On our first ERCOT audit (esVolta Anole, 240 MW / 480 MWh), that reconciliation closed on 55.2% of discharge events overall, and 81.8% of major events — mean ratio 0.98.
+This exposes a limit of our pre-registered [0.85, 1.0] F3 rule. The pass rate measures where a distribution is centered, not data quality:
+- Anole (mean 0.98) falls inside the band but has 17.3% of events exceeding 1.0 (a physical impossibility bounding our reconstruction noise).
+- Bat Cave (mean 0.77) has 0% inside the band, yet is just as clean and never violates physics.
 
-On Bat Cave, under identical rules: 1.22% overall, 1.71% of major events — mean ratio 0.77.
+Both are ordinary; neither is a defect. A 0.77 ratio matches total stored energy denomination (reflecting efficiency and auxiliary losses). A 0.98 ratio matches delivered energy denomination.
 
-Same market. Same public data product. Two reconciliation regimes. Yet their standard deviations are almost identical (0.038 vs 0.043). The difference is purely a location shift of 0.21.
+With n=2 and no published schema, we cannot distinguish a reporting convention from a physical performance difference — which is the finding. We don't claim either asset underperforms; we claim we cannot tell.
 
-This reveals a fundamental limit in our own pre-registered rules. Because the expectation band is fixed at [0.85, 1.0], the pass rate measures whether a ratio distribution is centered near 1.0, not telemetry quality.
+Public ERCOT telemetry feeds benchmarks, indices, and pre-diligence screens. If the state-of-charge field cannot be reconstructed without undocumented, asset-specific semantics, what are these screens measuring?
 
-- Anole's mean is 0.98, so its variance sweeps 81.8% of events into the band, while causing 17.3% to exceed 1.0 (a physical impossibility that bounds our reconstruction noise, not the battery).
-- Bat Cave's mean is 0.77, so its variance places 0% of events in the band, even though its telemetry is just as clean and never violates physics.
+Code, raw data, and hashes are open:
+GitHub: https://github.com/VolMax-Studio/volmax-ercot-batcave-audit
+DOI: https://doi.org/10.5281/zenodo.21401795
 
-Both positions are ordinary. Neither is a defect. A ratio near 0.77 is consistent with total stored energy denomination (reflecting round-trip losses and auxiliary load). A ratio near 0.98 is consistent with delivered energy denomination.
-
-We could not find published documentation defining these fields. With n=2 and no schema, the public telemetry is insufficient to distinguish a reporting convention difference from a physical performance difference — which is itself the finding. We do not claim either asset underperforms; we claim we cannot tell.
-
-Public ERCOT telemetry increasingly feeds performance benchmarking, third-party indices, and pre-diligence screening — the layer that runs before anyone gets a data room. If the state-of-charge field cannot be independently reconstructed without semantics nobody published, what is that layer measuring?
-
-Everything is open — code, raw telemetry, hashes, and the failure registry:
-
-Code and data: https://github.com/VolMax-Studio/volmax-ercot-batcave-audit
-DOI (all versions): https://doi.org/10.5281/zenodo.21401795
-
-If the field definitions exist somewhere public and we missed them, tell me — we will re-run and publish the correction under the same DOI.
+If we missed a public field definition, let us know — we will re-run and publish the fix.
 
 #BESS #EnergyStorage #ERCOT
