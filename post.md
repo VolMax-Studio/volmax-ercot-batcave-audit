@@ -8,8 +8,11 @@ Bat Cave BESS (100 MW/100 MWh, TX): 60 days of primary ERCOT SCED telemetry, 17,
 
 **The unresolved telemetry.** We compare reconstructed delivered energy against reported state-of-charge (SoC) drop.
 
-On Anole (240 MW/480 MWh), reconciliation closed on 81.8% of major events (mean ratio 0.98).
-On Bat Cave, it closed on only 1.71% of major events (mean ratio 0.77).
+On Bat Cave, the F3 reconciliation results are:
+- Primary (frozen rule, all 245 events): 1.22% pass (mean ratio 0.6339).
+- Exploratory (post-hoc stratification, ≥10 MWh, 117 events): 1.71% pass (mean ratio 0.7703).
+
+On Anole, under the same frozen rule: 55.2% pass overall; the same exploratory stratification reached 81.8% (mean 0.98).
 
 Same market, same data product, two different regimes. Yet their standard deviations are nearly identical (0.038 vs 0.043). The difference is a pure location shift of 0.21.
 
