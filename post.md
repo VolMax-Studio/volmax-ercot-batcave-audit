@@ -33,3 +33,5 @@ DOI: https://doi.org/10.5281/zenodo.21401795
 If we missed a public field definition, let us know — we will re-run and publish the fix.
 
 #BESS #EnergyStorage #ERCOT
+
+*Updated 2026-07-18 to state both populations; original as published preserved in git history.*
