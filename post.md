@@ -26,7 +26,7 @@ With n=2 and no published schema, we cannot distinguish a reporting convention f
 
 Public ERCOT telemetry feeds benchmarks, indices, and pre-diligence screens. If the state-of-charge field cannot be reconstructed without undocumented, asset-specific semantics, what are these screens measuring?
 
-Code, raw data, and hashes are open:
+The pipeline is inspectable; full reproduction requires GridStatus access, whose terms of use prohibit redistribution.
 GitHub: https://github.com/VolMax-Studio/volmax-ercot-batcave-audit
 DOI: https://doi.org/10.5281/zenodo.21401795
 
