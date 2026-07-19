@@ -18,7 +18,7 @@ Same market, same data product, two different regimes. Yet their standard deviat
 
 This exposes a limit of our pre-registered [0.85, 1.0] F3 rule. The pass rate measures where a distribution is centered, not data quality:
 - Anole (mean 0.98) falls inside the band but has 17.3% of events exceeding 1.0 (a physical impossibility bounding our reconstruction noise).
-- Bat Cave (mean 0.77) has only 1.22% inside the band (and 0% of events exceeding 1.0), yet is just as clean and never violates physics.
+- Bat Cave (mean 0.77) has 0% inside the band, yet is just as clean and never violates physics.
 
 Both are ordinary; neither is a defect. A 0.77 ratio matches total stored energy denomination (reflecting efficiency and auxiliary losses). A 0.98 ratio matches delivered energy denomination.
 
