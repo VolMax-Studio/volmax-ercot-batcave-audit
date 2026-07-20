@@ -7,7 +7,7 @@ This document registers a critical methodology failure detected during the execu
 ## 1. Description of the Failure
 
 In the initial reconnaissance phase (documented in `US-TX-BATC-001_L0_recon.md`), the analyst recorded the following assertion:
-> *"dok zvanični nameplate kapacitet iznosi 100 MWh (prema Business Wire saopštenju), maksimalna telemetrisana vrednost soc i max_soc u SCED uzorku za 1. april 2026. iznosi 76.8 MWh (~23.2% manje od nameplate-a)."*
+> *"while official nameplate capacity is 100 MWh (according to Business Wire press release), maximum telemetered value of soc and max_soc in SCED sample for April 1, 2026, is 76.8 MWh (~23.2% less than nameplate)."*
 
 This incorrect value (76.8 MWh) was subsequently frozen in the pre-registration document (`ZADATAK_prereg_US-TX-BATC-001_v1.md`) as the basis for the **F4 — SoC Field Interpretation** hypothesis framing (testing the "76.8 vs 100 MWh" mismatch).
 
