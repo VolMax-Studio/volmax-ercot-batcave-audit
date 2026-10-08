@@ -1,0 +1,27 @@
+{
+  "baseline_commit": "f9919b3e88c507aa948dd179b76810f4279f02d3",
+  "baseline_tree": "29720caaeaf6e4b287ed2873d354fe47bedaa1a1",
+  "behavior": {
+    "callbacks": false,
+    "executable": false,
+    "network_calls": false,
+    "telemetry": false
+  },
+  "canonical_url": "https://github.com/VolMax-Studio/volmax-ercot-batcave-audit",
+  "default_branch_at_recording": "main",
+  "license": {
+    "detected_spdx": "NOASSERTION",
+    "files": [
+      "LICENSE"
+    ],
+    "note": "This provenance record does not grant or alter license rights."
+  },
+  "owner": "VolMax-Studio",
+  "record_id": "urn:volmax:github:VolMax-Studio/volmax-ercot-batcave-audit:f9919b3e88c507aa948dd179b76810f4279f02d3",
+  "record_type": "volmax.repository-provenance",
+  "record_version": 1,
+  "recorded_at": "2026-10-08T19:42:50+00:00",
+  "repository": "VolMax-Studio/volmax-ercot-batcave-audit",
+  "schema": "urn:volmax:provenance:v1",
+  "scope": "Repository identity and baseline commit only; historical tags, releases, evidence, authorship, and existing file bytes are unchanged."
+}
